@@ -3,3 +3,8 @@
     width: 600px;
     height: 600px;
 }
+
+.skyPic:hover {
+    border: .1px solid white;
+    margin: -.1px;
+}
