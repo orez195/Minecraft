@@ -1,8 +1,10 @@
-var width = 20;
+var width = 15;
 var bodyGame = $('.bodyGame');
 
+// creating main body of the game
+
 for (var x=0; x < width; x++) {
-    for (var y=0; y < 14; y++) {
+    for (var y=0; y < 11; y++) {
         var skyPic = $("<div/>");
         skyPic.addClass("skyPic");
         bodyGame.append(skyPic);
@@ -14,7 +16,7 @@ for (var x=0; x < width; x++) {
 }
 
 for (var x=0; x < width; x++) {
-    for (var y=14; y < 15; y++) {
+    for (var y=11; y < 12; y++) {
         var grassDirtPic = $("<div/>");
         grassDirtPic.addClass("grassDirtPic skyPic");
         bodyGame.append(grassDirtPic);
@@ -26,7 +28,7 @@ for (var x=0; x < width; x++) {
 }
 
 for (var x=0; x < width; x++) {
-    for (var y=15; y < width; y++) {
+    for (var y=12; y < width; y++) {
         var dirtPic = $("<div/>");
         dirtPic.addClass("dirtPic skyPic");
         bodyGame.append(dirtPic);
@@ -36,36 +38,3 @@ for (var x=0; x < width; x++) {
         dirtPic.css('float', 'left')
     }
 }
-
-/* for (var x=0; x < width; x++) {
-    for (var y=0; y < width/3; y++) {
-        var dirtPic;
-        dirtPic.addClass("dirtPic");
-        skyPic.prepend(dirtPic);
-        dirtPic.css("background-image", "url(./images/dirt.png)");
-        dirtPic.css('width', '40px');
-        dirtPic.css('height', '40px');
-        dirtPic.css('float', 'left')
-    }
-}
-/*
-$(document).ready(function() {
-    for(var x = 0; x < 16; x++) {
-        for(var y = 0; y < 16; y++) {
-            var unit = $("<div class='unit'></div>");
-            unit.appendTo('#container');
-        }
-    }
-});
-
-for (var x=0; x <= width; x++) {
-    for (var y=0; y <= width; y++) {
-        var cell = document.createElement("DIV");
-        cell.setAttribute('class', 'cell');
-        grid.appendChild(cell);
-        cell.addEventListener("mousedown", changeEnable);
-        cell.addEventListener("mouseover", changeColor);
-        cell.addEventListener("mouseup", changeEnable);
-    }
-}
-*/
