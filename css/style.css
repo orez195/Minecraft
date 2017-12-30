@@ -2,9 +2,164 @@
     border: 1px solid black;
     width: 600px;
     height: 600px;
+    margin-left: 200px;
 }
 
 .skyPic:hover {
-    border: .1px solid white;
-    margin: -.1px;
+	border: .1px solid white;
+	margin: -.1px;
+}
+
+.bodyGame, .menu {
+	float: left;
+}
+
+.menu {
+	height: 600px;
+	width: 200px;
+	margin-left: 160px;
+	border: 1px solid black;
+	background-color: black;
+}
+
+.tools {
+	height: 60px;
+	width: 60px;
+	border: 1px solid white;
+	margin-left: 65px;
+	margin-top: 40px;
+}
+
+.tools:hover, .blocks:hover {
+	opacity: 0.9;
+}
+
+#pickAxe {
+	background-image: url("../images/pickaxe.png");
+}
+
+#shovel {
+	background-image: url("../images/shovel.png");
+}
+
+#axe {
+	background-image: url("../images/axe.png");
+
+}
+
+#dirtBlock, #grassDirtBlock {
+	display: inline-block;
+}
+
+#treeBlock, #leafBlock {
+	display: inline-block;
+}
+
+#rockBlock {
+	display: inline-block;
+}
+
+.blocks {
+	border: 1px solid white;
+	width: 50px;
+	height: 50px;
+	margin-left: 30px;
+	margin-top: 20px;
+	color: white;
+	text-align: center;
+}
+
+#dirtBlock {
+	background-image: url("../images/dirt.png");
+}
+
+#grassDirtBlock {
+	background-image: url("../images/grassdirt.jpg");
+}
+
+#treeBlock {
+	background-image: url("../images/tree.png");
+}
+
+#leafBlock {
+	background-image: url("../images/leaf.jpg");	
+}
+
+#rockBlock {
+	background-image: url("../images/rock.png");	
+}
+
+#resetBtn {
+	height: 40px;
+	width: 100px;
+	border: 1px solid white;
+	margin-left: 50px;
+	margin-top: 15px;
+	color: white;
+	text-align: center;
+}
+
+#resetBtn:hover {
+	border: 2px solid white;
+}
+
+.varCloud {
+	float: left;
+	background-color: white;
+	width: 40px;
+	height: 40px;
+}
+
+.varLeaf {
+	float:left;
+	background-image: url("../images/leaf.jpg");
+	width: 40px;
+	height: 40px;
+}
+
+.varLeaf:hover {
+	border: .1px solid white;
+}
+
+.varRock {
+	float: left;
+	background-image: url("../images/rock.png");	
+	width: 40px;
+	height: 40px;
+}
+
+.varRock:hover{
+	border: .1px solid white;
+}
+
+.varTree {
+	float: left;
+	background-image: url("../images/tree.png");
+	width: 40px;
+	height: 40px;
+}
+
+.varTree:hover {
+	border: .1px solid white;	
+}
+
+.varSky {
+	width: 40px;
+	height: 40px;
+	float: left;
+	background-image: url("../images/sky.jpg");
+}
+
+.varDirt {
+	width: 40px;
+	height: 40px;
+	float: left;
+	background-image: url("../images/dirt.png");	
+}
+
+.varGrassDirt {
+	width: 40px;
+	height: 40px;
+	float: left;
+	background-image: url("../images/grassdirt.jpg");
 }
