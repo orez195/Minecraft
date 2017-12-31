@@ -60,10 +60,14 @@ $("#rockBlock").click(putRock);
 function removeRocks() {
 
     $(".varRock").on("click", function () {
+        if($(this).hasClass("varRock")){
         $(this).removeClass("varRock");
         $(this).addClass("varSky");
+
         countRock++;
+        console.log(countRock);
         $("#rockBlock").text(countRock);
+    }
     })
 
     $(".varGrassDirt").off("click");
@@ -73,17 +77,18 @@ function removeRocks() {
 }
 
 function putRock() {
-    if (countRock > 0) {
-        $(".varSky").on("click", function () {
+        $(".varSky").one("click", function () {
+        if (countRock > 0) {
+
             $(this).removeClass("varGrassDirt");
             $(this).removeClass("varTree");
             $(this).removeClass("varLeaf");
             $(this).removeClass("varSky");
             $(this).addClass("varRock");
             countRock--;
-            $("#rockBlock").text(countRock);
+            $("#rockBlock").text(countRock); 
+        }
         })
-    }
 }
 
 
@@ -114,8 +119,8 @@ function removeDirtAndGrassDirt() {
 }
 
 function putDirt() {
-    if (countDirt > 0) {
-        $(".varSky").on("click", function () {
+        $(".varSky").one("click", function () {
+            if (countDirt > 0) {
             $(this).removeClass("varGrassDirt");
             $(this).removeClass("varTree");
             $(this).removeClass("varLeaf");
@@ -124,13 +129,14 @@ function putDirt() {
             $(this).addClass("varDirt");
             countDirt--;
             $("#dirtBlock").text(countDirt);
+        }
         })
-    }
+    
 }
 
 function putGrassDirt() {
-    if (countGrassDirt > 0) {
-        $(".varSky").on("click", function () {
+        $(".varSky").one("click", function () {
+            if (countGrassDirt > 0) {
             $(this).removeClass("varDirt");
             $(this).removeClass("varTree");
             $(this).removeClass("varLeaf");
@@ -139,8 +145,9 @@ function putGrassDirt() {
             $(this).addClass("varGrassDirt");
             countGrassDirt--;
             $("#grassDirtBlock").text(countGrassDirt);
+        }
         })
-    }
+    
 }
 
 $("#axe").click(removeLeafAndTree); //setting up leaf and tree functionality
@@ -170,7 +177,8 @@ function removeLeafAndTree() {
 }
 
 function putTree() {
-    $(".varSky").on("click", function () {
+    $(".varSky").one("click", function () {
+        if(countTree > 0){
         $(this).removeClass("varGrassDirt");
         $(this).removeClass("varDirt");
         $(this).removeClass("varRock");
@@ -179,11 +187,13 @@ function putTree() {
         $(this).addClass("varTree");
         countTree--;
         $("#treeBlock").text(countTree);
+    }
     })
 }
 
 function putLeaf() {
-    $(".varSky").on("click", function () {
+    $(".varSky").one("click", function () {
+        if(countLeaf > 0){
         $(this).removeClass("varGrassDirt");
         $(this).removeClass("varDirt");
         $(this).removeClass("varTree");
@@ -192,6 +202,7 @@ function putLeaf() {
         $(this).addClass("varLeaf");
         countLeaf--;
         $("#leafBlock").text(countLeaf);
+    }
     })
 }
 
